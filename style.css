@@ -69,12 +69,48 @@ nav {
   justify-content: center;
   flex-direction: column;
   cursor: pointer;
+  position: relative;
 }
 .menu div {
   width: 30px;
   height: 3px;
   background-color: rgba(0, 0, 0, 0.659);
   margin: 2px 0;
+  transition: transform 0.5s ease, opacity 0.3s ease;
+}
+
+.menu.active .line-2 {
+  opacity: 0;
+}
+
+.menu.active .line-1 {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu.active .line-3 {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+.menu-content {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background-color: white;
+  display: none;
+  transform: scale(0.5);
+  transition: opacity 3s ease;
+}
+.menu-content.active {
+  display: block;
+  transform: scale(1);
+}
+.menu-content ul {
+  list-style: none;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.menu-content ul li {
+  cursor: pointer;
 }
 
 @media (max-width: 720px) {
