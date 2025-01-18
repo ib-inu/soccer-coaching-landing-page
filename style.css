@@ -5,13 +5,14 @@
 }
 body {
   font-family: "Lato", serif;
+  background-color: whitesmoke;
 }
 nav {
   display: flex;
-  background-color: whitesmoke;
   box-shadow: 0px 0.1px 4px 2px rgba(128, 128, 128, 0.205);
   justify-content: space-around;
   min-height: 80px;
+  background-color: white;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -168,7 +169,7 @@ nav {
   display: flex;
   gap: 20px;
 }
-.home-btn button {
+button {
   width: clamp(100px, 10vw, 200px);
   height: clamp(40px, 10vw, 50px);
   color: white;
@@ -176,7 +177,7 @@ nav {
   cursor: pointer;
   transition: all 0.8s ease;
 }
-.btn-start {
+.btn-red {
   background-color: rgb(211, 50, 50);
   border: none;
 }
@@ -195,14 +196,15 @@ nav {
 .courses-page {
   padding: 100px;
 }
-.courses-page h1 {
+.title {
   text-align: center;
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 600;
   margin-bottom: 28px;
   position: relative;
+  color: #292d36;
 }
-.courses-page h1::before {
+.title:before {
   content: "";
   width: 78px;
   height: 4px;
@@ -211,6 +213,23 @@ nav {
   top: -40%;
   left: 50%;
   transform: translateX(-50%);
+}
+.sub-heading {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 600;
+  margin-bottom: 28px;
+  position: relative;
+  color: #292d36;
+  display: inline-block;
+}
+.sub-heading::before {
+  content: "";
+  width: 78px;
+  height: 4px;
+  background-color: red;
+  position: absolute;
+  top: -40%;
+  left: 0;
 }
 .courses-page p {
   margin-bottom: 48px;
@@ -223,14 +242,17 @@ nav {
   gap: 2rem;
 }
 
-.course-1 {
+.course {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   max-width: 780px;
 }
-.course-1 h2,
-.course-1 p {
+.course h3 {
+  font-size: clamp(14px, 6vw, 22px);
+}
+.course h3,
+.course p {
   text-align: left;
 }
 .course-image {
@@ -241,7 +263,7 @@ nav {
   border-radius: 6px;
   position: relative;
 }
-.course-image::after {
+.gray-effect::after {
   content: "";
   position: absolute;
   top: 0;
@@ -257,6 +279,55 @@ nav {
   object-fit: cover;
 }
 
+.about-page {
+  margin: 20px 0;
+}
+.experience {
+  display: flex;
+  gap: 1.4em;
+  align-items: center;
+  position: relative;
+  margin-bottom: 100px;
+}
+.experience-title {
+  position: absolute;
+  z-index: 10;
+  top: 10%;
+  left: clamp(30%, 10vw, 50%);
+  background-color: white;
+  padding: 0.1em;
+  font-size: clamp(1.2rem, 4vw, 4rem);
+  font-style: italic;
+  font-weight: 600;
+  color: #292d36;
+  text-transform: uppercase;
+}
+.experience-image {
+  overflow: hidden;
+  max-width: 800px;
+  position: relative;
+}
+.experience-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0 0 60px 0;
+}
+.experience-image::after {
+  border-radius: 0 0 60px 0;
+}
+.experience-text {
+  transform: translateY(30%);
+  min-width: 460px;
+  margin: 0 20px;
+}
+.experience-text p {
+  margin-bottom: 22px;
+  max-width: 440px;
+  color: #444852;
+  line-height: 26px;
+}
+
 @media (max-width: 720px) {
   .nav-items {
     display: none;
@@ -265,7 +336,7 @@ nav {
     display: flex;
   }
   .course-image {
-    height: 100%px;
+    height: 100%;
   }
 }
 @media (max-width: 300px) {
@@ -277,6 +348,21 @@ nav {
   .courses-page {
     padding: 100px 10px;
   }
+  .experience-text p {
+    padding: 0 2.2vw;
+  }
+  .experience-text h2 {
+    font-size: clamp(1.2rem, 8vw, 4rem);
+  }
+  .experience-text h2,
+  .experience-text p {
+    margin: 10px;
+  }
+  .sub-heading::before {
+    top: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 @media (max-width: 1040px) {
   .courses-container {
@@ -284,5 +370,34 @@ nav {
   }
   .course-1 {
     margin: auto;
+  }
+  .experience-image {
+    display: none;
+  }
+  .sub-heading::before {
+    top: -20%;
+    transform: translateX(-50%);
+  }
+  .experience-text {
+    min-width: 0;
+    transform: translateY(0%);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    text-align: center;
+  }
+
+  .experience {
+    flex-direction: column;
+    align-items: center;
+  }
+  .experience-text p {
+    margin: 22px auto;
+    text-align: left;
+  }
+  .experience-title {
+    position: static;
+    font-size: clamp(1.2rem, 8vw, 4rem);
   }
 }
