@@ -226,7 +226,7 @@ nav {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.647);
   z-index: 1;
 }
 
@@ -458,6 +458,7 @@ nav {
   gap: 1em;
   align-items: center;
   text-align: center;
+  position: relative;
 }
 
 .coach-img {
@@ -465,6 +466,7 @@ nav {
   width: 300px;
   height: 300px;
   border-radius: 8px;
+  position: relative;
 }
 
 .coach-img img {
@@ -473,6 +475,41 @@ nav {
   object-fit: cover;
 }
 
+.contact-coach {
+  z-index: 5;
+  position: absolute;
+  bottom: -10%;
+  left: 50%;
+}
+
+.social-icons {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 0;
+  transition: bottom 0.3s ease;
+}
+
+.social-icons span {
+  color: #fff;
+  font-size: 20px;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.social-icons span:hover {
+  color: red;
+  transform: scale(1.2);
+}
+
+.coach-img:hover .social-icons {
+  bottom: 0;
+}
 /* --------------MEDIA QUERY------------ */
 
 @media (max-width: 1300px) {
