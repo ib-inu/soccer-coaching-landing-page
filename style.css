@@ -384,6 +384,7 @@ nav {
   justify-content: center;
   align-items: center;
 }
+
 .stats::after {
   content: "";
   position: absolute;
@@ -394,6 +395,7 @@ nav {
   background-color: rgba(0, 0, 0, 0.505);
   z-index: 1;
 }
+
 .counter-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -405,6 +407,7 @@ nav {
   text-align: center;
   width: 80%;
 }
+
 .counter {
   display: flex;
   flex-direction: column;
@@ -432,7 +435,53 @@ nav {
   filter: invert(1);
 }
 
+.team-info {
+  margin-top: 100px;
+}
+.team-info p {
+  margin-bottom: 48px;
+  text-align: center;
+  color: rgb(77, 77, 77);
+}
+
+.coaches-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+}
+
+.coach-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+  text-align: center;
+}
+
+.coach-img {
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+  border-radius: 8px;
+}
+
+.coach-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
 /* --------------MEDIA QUERY------------ */
+
+@media (max-width: 1300px) {
+  .coach-img {
+    width: 230px;
+    height: 230px;
+  }
+}
+
 @media (max-width: 1040px) {
   .sub-heading::before {
     top: -20%;
@@ -474,6 +523,16 @@ nav {
     margin: 22px auto;
     text-align: left;
   }
+
+  .coaches-list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .coach-img {
+    width: 310px;
+    height: 310px;
+  }
 }
 
 @media (max-width: 800px) {
@@ -509,6 +568,11 @@ nav {
   .course-image {
     height: 100%;
   }
+
+  .coach-img {
+    width: 210px;
+    height: 210px;
+  }
 }
 
 @media (max-width: 500px) {
@@ -527,6 +591,16 @@ nav {
   .experience-text h2,
   .experience-text p {
     margin: 10px;
+  }
+
+  .coach-img {
+    width: 80%;
+    height: 80%;
+  }
+
+  .coaches-list {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
   }
 }
 
