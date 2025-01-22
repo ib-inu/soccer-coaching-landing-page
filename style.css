@@ -510,6 +510,70 @@ nav {
 .coach-img:hover .social-icons {
   bottom: 0;
 }
+
+/* ------------Schedules-Page---------- */
+.schedules-page {
+  margin: 100px 0;
+  padding: 5em;
+  background-image: url(/images/schedules-page-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  color: #fff;
+  text-align: center;
+}
+
+.schedules-page h1 {
+  color: #fff;
+}
+
+.schedules-page h1,
+.schedules-page p {
+  z-index: 2;
+  position: inherit;
+}
+
+.schedules-page::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.759);
+  z-index: 1;
+}
+
+.schedules-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2em;
+  justify-content: center;
+  align-items: stretch;
+  margin-top: 50px;
+  padding: 0 2.5em;
+}
+.schedule {
+  border: 2px solid rgb(246, 246, 246);
+  border-radius: 8px;
+  padding: 1.6em;
+  z-index: 2;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.schedule:hover {
+  background-color: #fff;
+  color: #292d36;
+}
+.schedule h3 {
+  font-size: clamp(8px, 7vw, 34px);
+  color: rgb(171, 171, 171);
+}
 /* --------------MEDIA QUERY------------ */
 
 @media (max-width: 1300px) {
@@ -569,6 +633,9 @@ nav {
   .coach-img {
     width: 310px;
     height: 310px;
+  }
+  .schedules-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -641,6 +708,16 @@ nav {
   }
 }
 
+@media (max-width: 400px) {
+  .schedules-page {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .schedules-container {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 12px;
+  }
+}
 @media (max-width: 300px) {
   .home-btn-container {
     flex-direction: column;
