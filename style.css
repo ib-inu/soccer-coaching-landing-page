@@ -438,6 +438,7 @@ nav {
 .team-info {
   margin-top: 100px;
 }
+
 .team-info p {
   margin-bottom: 48px;
   text-align: center;
@@ -554,6 +555,7 @@ nav {
   margin-top: 50px;
   padding: 0 2.5em;
 }
+
 .schedule {
   border: 2px solid rgb(246, 246, 246);
   border-radius: 8px;
@@ -566,20 +568,104 @@ nav {
   cursor: pointer;
   transition: all 0.3s ease;
 }
+
 .schedule:hover {
   background-color: #fff;
   color: #292d36;
 }
+
 .schedule h3 {
   font-size: clamp(8px, 7vw, 34px);
   color: rgb(171, 171, 171);
 }
+
+/* ---------Pricing-Page---------- */
+
+.pricing-page {
+  padding: 2em;
+  margin: 100px 0;
+  text-align: center;
+}
+
+.pricing-plans {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  max-width: 900px;
+  margin: 40px auto;
+  gap: 1em;
+}
+
+.pricing-plan {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 8px;
+  padding: 1.4em;
+  width: 380px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  gap: 2em;
+  overflow: hidden;
+}
+
+.pricing-plan h3 {
+  font-size: clamp(8px, 7vw, 34px);
+  font-weight: 400;
+  color: #444852;
+}
+
+.pricing-plan h2 {
+  color: rgb(211, 50, 50);
+}
+
+.pricing-plan h2 span {
+  color: gray;
+  font-weight: 400;
+  font-size: clamp(12px, 2vw, 1rem);
+}
+
+.pricing-plan .pricing-btn {
+  width: 100%;
+}
+
+.pricing-btn a {
+  display: inline-block;
+  transform: translateX(-38px);
+  background-color: rgb(211, 50, 50);
+  padding: 1em 4em;
+  color: #fff;
+  border-radius: 6px 22px 22px 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pricing-btn a.gray-btn {
+  background-color: rgb(121, 121, 121);
+}
+
+.pricing-btn a.gray-btn:hover {
+  background-color: rgb(164, 164, 164);
+}
+
+.pricing-btn a:hover {
+  background-color: rgb(169, 40, 40);
+}
+
 /* --------------MEDIA QUERY------------ */
 
 @media (max-width: 1300px) {
   .coach-img {
     width: 230px;
     height: 230px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .pricing-plan {
+    width: 290px;
   }
 }
 
@@ -634,11 +720,26 @@ nav {
     width: 310px;
     height: 310px;
   }
+
   .schedules-container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+@media (max-width: 940px) {
+  .pricing-plans {
+    grid-template-columns: repeat(1, 1fr);
+  }
 
+  .description {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .pricing-plan {
+    width: 390px;
+  }
+}
 @media (max-width: 800px) {
   .counter-container {
     grid-template-columns: 1fr 1fr;
@@ -706,6 +807,10 @@ nav {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
   }
+
+  .pricing-plan {
+    width: 80%;
+  }
 }
 
 @media (max-width: 400px) {
@@ -713,11 +818,13 @@ nav {
     padding-left: 12px;
     padding-right: 12px;
   }
+
   .schedules-container {
     grid-template-columns: repeat(1, 1fr);
     padding: 12px;
   }
 }
+
 @media (max-width: 300px) {
   .home-btn-container {
     flex-direction: column;
