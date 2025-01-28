@@ -19,8 +19,21 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
   </head>
   <body>
+    <div class="modal-contact-confirm">
+      <div class="modal-container">
+        <span class="btn-close" id="contact-modal-close-btn">X</span>
+        <div class="checkmark-circle">
+          <span class="checkmark">✔</span>
+        </div>
+        <h2>Message Send</h2>
+      </div>
+    </div>
     <nav>
       <div class="logo">
         <div class="logo-img">
@@ -424,11 +437,32 @@
         <div class="swiper-pagination"></div>
       </div>
     </section>
+    <section class="contact-page">
+      <div class="form-container">
+        <form class="contact-form" id="contact-form">
+          <h1 class="sub-heading">Get in Touch</h1>
+          <input required name="name" type="text" placeholder="Name" />
+          <input required name="email" type="email" placeholder="Email" />
+          <input required name="subject" type="text" placeholder="Subject" />
+          <textarea
+            required
+            name="message"
+            class="message-field"
+            placeholder="Message"
+          ></textarea>
+          <button class="btn-red" type="submit">Submit</button>
+        </form>
+      </div>
+      <div class="map-container">
+        <div id="map"></div>
+      </div>
+    </section>
 
     <script
       type="module"
       src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
     ></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script type="module" src="index.js"></script>
   </body>
 </html>
