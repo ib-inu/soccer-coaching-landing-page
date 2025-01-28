@@ -870,6 +870,79 @@ nav {
 .modal-contact-confirm.active .modal-container {
   transform: scale(1);
 }
+/* ---------------Footer---------------- */
+footer {
+  background-color: #292d36;
+  display: flex;
+  gap: 8em;
+  flex-direction: column;
+  color: #fff;
+}
+.overview {
+  display: flex;
+  gap: 10em;
+  justify-content: center;
+  padding-top: 5em;
+  flex-wrap: wrap;
+}
+.overview-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+}
+
+.overview-item h3 {
+  margin-bottom: 8px;
+  font-size: clamp(18px, 6vw, 22px);
+  color: #ffffffdf;
+}
+.overview-item p {
+  font-size: clamp(14px, 6vw, 18px);
+  line-height: 25px;
+  font-weight: 400;
+  color: #ffffffb4;
+}
+
+footer .social-media {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+footer .social-media span {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  border-radius: 50%;
+  background-color: #444852;
+}
+
+.copyright {
+  text-align: center;
+  border-top: 1px solid gray;
+  padding-top: 15px;
+  padding-bottom: 1em;
+}
+.copyright p a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.hover-red-text,
+.hover-red-bg {
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.hover-red-text:hover {
+  color: rgb(211, 50, 50);
+}
+.hover-red-bg:hover {
+  background-color: rgb(211, 50, 50);
+}
 
 /* --------------MEDIA QUERY------------ */
 
@@ -883,6 +956,12 @@ nav {
 @media (max-width: 1200px) {
   .pricing-plan {
     width: 290px;
+  }
+
+  .overview {
+    padding-left: 5em;
+    padding-right: 5em;
+    gap: 5em;
   }
 }
 
@@ -1076,6 +1155,15 @@ nav {
   .pricing-plan {
     width: 80%;
   }
+
+  .overview {
+    align-items: start;
+    justify-content: start;
+  }
+  .overview-item {
+    justify-content: start;
+    align-items: start;
+  }
 }
 
 @media (max-width: 400px) {
@@ -1095,6 +1183,10 @@ nav {
   }
   .modal-container h2 {
     font-size: 18px;
+  }
+  .overview {
+    padding-left: 2em;
+    padding-right: 2em;
   }
 }
 
