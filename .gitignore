@@ -1,0 +1,12 @@
+node_modules/
+npm-debug.log*
+package-lock.json
+
+.parcel-cache/
+dist/
+
+.vscode/
+.DS_Store
+Thumbs.db
+
+.env

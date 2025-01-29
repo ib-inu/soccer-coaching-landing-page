@@ -77,6 +77,32 @@ button {
   z-index: 1;
 }
 
+/* ---------------LOADER---------- */
+
+#loader {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid red;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  z-index: 9999;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /* -----------NAV-------- */
 nav {
   display: flex;
@@ -121,15 +147,16 @@ nav {
   align-items: center;
   font-family: "Lato", serif;
   font-weight: 500;
+}
+
+.nav-items .nav-link {
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
   color: rgb(99, 99, 99);
 }
 
-.nav-items li {
-  cursor: pointer;
-  position: relative;
-}
-
-.nav-items li::before {
+.nav-items .nav-link::before {
   content: "";
   position: absolute;
   top: -40px;
@@ -140,7 +167,10 @@ nav {
   transition: 400ms;
 }
 
-.nav-items li:hover::before {
+.nav-items .nav-link:hover::before {
+  width: 100%;
+}
+.nav-items .nav-link.active::before {
   width: 100%;
 }
 
@@ -203,6 +233,10 @@ nav {
 
 .menu-content ul li {
   cursor: pointer;
+}
+.menu-content ul li a {
+  color: inherit;
+  text-decoration: none;
 }
 
 /* --------------Home Page---------- */
@@ -901,6 +935,10 @@ footer {
   line-height: 25px;
   font-weight: 400;
   color: #ffffffb4;
+}
+.overview-item p a {
+  color: #ffffffb4;
+  text-decoration: none;
 }
 
 footer .social-media {
