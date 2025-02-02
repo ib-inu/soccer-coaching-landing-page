@@ -7,3 +7,4 @@ A responsive landing page for soccer coaching built with HTML, CSS, and JavaScri
 
 -optimize performance  
 -image optimization 
+ 
