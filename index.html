@@ -1,12 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- meta -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta
+      name="description"
+      content="A soccer coaching academy dedicated to improving skills, tactics, and performance for players of all levels."
+    />
+    <meta
+      name="keywords"
+      content="soccer coaching, football training, player development, soccer academy, sports coaching, youth soccer, professional football training,
+    soccer coaching landing page , best football coaching websites , football coaching website"
+    />
+    <meta name="author" content="Ibnu Muhthar" />
+
+    <meta
+      property="og:title"
+      content="Soccer Coaching Academy | Professional Football Training"
+    />
+
+    <meta
+      property="og:description"
+      content="Train with the best at our Soccer Coaching Academy. Expert-led football training to enhance skills, strategy, and fitness."
+    />
+    <meta property="og:type" content="website" />
+    <!-- TITLE -->
+    <title>Soccer Coaching Academy | Professional Football Training</title>
+    <!-- LINKS -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./images/favicon-16x16.png"
+    />
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
       rel="stylesheet"
@@ -25,536 +59,605 @@
     />
   </head>
   <body>
-    <!-- --------- Success Modal of Contact form -->
-    <div class="modal-contact-confirm">
-      <div class="modal-container">
-        <span class="btn-close" id="contact-modal-close-btn">X</span>
-        <div class="checkmark-circle">
-          <span class="checkmark">✔</span>
-        </div>
-        <h2>Message Send</h2>
-      </div>
+    <div class="loader-div">
+      <div class="loader"></div>
     </div>
-
-    <!-- -------------- Navbar ---------->
-    <nav>
-      <div class="logo">
-        <div class="logo-img">
-          <img src="./images/logo.webp" alt="soccer image" />
-        </div>
-        <p>SOCCER</p>
-      </div>
-      <ul class="nav-items">
-        <li><a href="#home" class="nav-link">Home</a></li>
-        <li><a href="#course" class="nav-link">Courses</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#schedules" class="nav-link">Schedules</a></li>
-        <li><a href="#pricing" class="nav-link">Pricing</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-      <div class="menu">
-        <div class="line-1"></div>
-        <div class="line-2"></div>
-        <div class="line-3"></div>
-      </div>
-    </nav>
-
-    <!-- ----------- NavBar Menu content for smaller device -->
-    <div class="menu-content">
-      <ul>
-        <li><a href="#home" class="nav-link">Home</a></li>
-        <li><a href="#course" class="nav-link">Courses</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#schedules" class="nav-link">Schedules</a></li>
-        <li><a href="#pricing" class="nav-link">Pricing</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
-      </ul>
-    </div>
-
-    <!-- -----------HOME section -->
-    <section id="home" class="home-page">
-      <div class="home-content">
-        <div class="home-text">
-          <h1>Best Football Academy Near You</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Perferendis, perspiciatis soluta eaque optio aperiam autem, illo ad
-            voluptatem officia
-          </p>
-        </div>
-        <div class="home-btn-container">
-          <button class="btn-red">Get Started</button>
-          <button class="btn-learn-more">Learn more</button>
+    <!-- Page -->
+    <div class="page">
+      <!-- --------- Success Modal of Contact form -->
+      <div class="modal-contact-confirm">
+        <div class="modal-container">
+          <span class="btn-close" id="contact-modal-close-btn">X</span>
+          <div class="checkmark-circle">
+            <span class="checkmark">✔</span>
+          </div>
+          <h2>Message Send</h2>
         </div>
       </div>
-    </section>
 
-    <!-- -------------Course section -->
-    <section id="course" class="courses-page">
-      <h1 class="title">Our Courses</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, sapiente
-        ipsum Perferendis, perspiciatis soluta eaque optio aperiam autem.
-      </p>
-      <div class="courses-container">
-        <!--  -->
-        <div class="course">
-          <div class="course-image gray-effect">
+      <!-- -------------- Navbar ---------->
+      <nav>
+        <div class="logo">
+          <div class="logo-img">
+            <img src="./images/logo.webp" alt="soccer image" />
+          </div>
+          <p>SOCCER</p>
+        </div>
+        <ul class="nav-items">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#course" class="nav-link">Courses</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#schedules" class="nav-link">Schedules</a></li>
+          <li><a href="#pricing" class="nav-link">Pricing</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="menu">
+          <div class="line-1"></div>
+          <div class="line-2"></div>
+          <div class="line-3"></div>
+        </div>
+      </nav>
+
+      <!-- ----------- NavBar Menu content for smaller device -->
+      <div class="menu-content">
+        <ul>
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#course" class="nav-link">Courses</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#schedules" class="nav-link">Schedules</a></li>
+          <li><a href="#pricing" class="nav-link">Pricing</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- -----------HOME section -->
+      <section id="home" class="home-page">
+        <div class="hero-img">
+          <img
+            src="./images/hero_1kb.jpg"
+            data-src="./images/hero.webp"
+            alt="hero-img"
+          />
+        </div>
+        <div class="home-content">
+          <div class="home-text">
+            <h1>Best Football Academy Near You</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Perferendis, perspiciatis soluta eaque optio aperiam autem, illo
+              ad voluptatem officia
+            </p>
+          </div>
+          <div class="home-btn-container">
+            <button class="btn-red">Get Started</button>
+            <button class="btn-learn-more">Learn more</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- -------------Course section -->
+      <section id="course" class="courses-page">
+        <h1 class="title">Our Courses</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, sapiente
+          ipsum Perferendis, perspiciatis soluta eaque optio aperiam autem.
+        </p>
+        <div class="courses-container">
+          <!--  -->
+          <div class="course">
+            <div class="course-image">
+              <img
+                data-src="./images/course-goalkeeping.webp"
+                src="./images/course-goalkeeping_11zon.jpg"
+                alt="goal keeper image"
+              />
+            </div>
+            <h3>Goal Keeper</h3>
+            <p>
+              Loren ipsum dolor sit amet consectetur adipisicing elit. Id,
+              sapiente ipsum?
+            </p>
+          </div>
+          <!--  -->
+          <!--  -->
+          <div class="course">
+            <div class="course-image">
+              <img
+                data-src="./images/course-attacking.webp"
+                src="./images/course-attacking_11zon.webp"
+                alt="striker"
+              />
+            </div>
+            <h3>Striker</h3>
+            <p>
+              Loren ipsum dolor sit amet consectetur adipisicing elit. Id,
+              sapiente ipsum?
+            </p>
+          </div>
+          <!--  -->
+          <!--  -->
+          <div class="course">
+            <div class="course-image">
+              <img
+                data-src="./images/course-defending.webp"
+                src="./images/course-defending_11zon.jpg"
+                alt="striker"
+              />
+            </div>
+            <h3>Defender</h3>
+            <p>
+              Loren ipsum dolor sit amet consectetur adipisicing elit. Id,
+              sapiente ipsum?
+            </p>
+          </div>
+          <!--  -->
+        </div>
+      </section>
+
+      <!-- -------------about section -->
+      <section id="about" class="about-page">
+        <div class="experience">
+          <h1 class="experience-title">30 Years Of Experience</h1>
+          <div class="experience-image">
             <img
-              src="./images/course-goalkeeping.jpg"
-              alt="goal keeper image"
+              data-src="images/experience.webp"
+              src="images/experience_11zon.jpg"
+              alt="soccer picture"
             />
           </div>
-          <h3>Goal Keeper</h3>
-          <p>
-            Loren ipsum dolor sit amet consectetur adipisicing elit. Id,
-            sapiente ipsum?
-          </p>
-        </div>
-        <!--  -->
-        <!--  -->
-        <div class="course">
-          <div class="course-image">
-            <img src="./images/course-attacking.webp" alt="striker" />
+          <div class="experience-text">
+            <h2 class="sub-heading">Learn More About Us</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe
+              modi explicabo iure fugit facere quos minima reiciendis atque
+              similique quam incidunt voluptatibus repellat quaerat beatae
+              libero dolore voluptate, commodi nihil. Lorem ipsum dolor, sit
+              amet consectetur adipisicing elit. Ullam eos consequatur laborum
+              ducimus accusamus eveniet obcaecati, nam dignissimos quaerat ut
+              ipsum. Cum soluta tempore earum alias iure ad esse velit!
+            </p>
+            <button class="btn-red">Read More</button>
           </div>
-          <h3>Striker</h3>
-          <p>
-            Loren ipsum dolor sit amet consectetur adipisicing elit. Id,
-            sapiente ipsum?
-          </p>
         </div>
-        <!--  -->
-        <!--  -->
-        <div class="course">
-          <div class="course-image gray-effect">
-            <img src="./images/course-defending.jpg" alt="striker" />
+        <div class="stats">
+          <div class="bg-image">
+            <img
+              data-src="./images/stats-bg.webp"
+              src="./images/stats-bg_11zon.jpg"
+              alt="stats-bg"
+            />
           </div>
-          <h3>Defender</h3>
-          <p>
-            Loren ipsum dolor sit amet consectetur adipisicing elit. Id,
-            sapiente ipsum?
-          </p>
+          <div class="counter-container">
+            <div class="counter">
+              <div class="counter-icon">
+                <img src="images/people.webp" alt="people icon" />
+              </div>
+              <p class="counter-num" data-target="5321">0</p>
+              <p>Satisfied Trainee</p>
+            </div>
+            <div class="counter">
+              <div class="counter-icon">
+                <img src="images/communication.webp" alt="thumps icon" />
+              </div>
+              <p class="counter-num" data-target="345">0</p>
+              <p>Completed courses</p>
+            </div>
+            <div class="counter">
+              <div class="counter-icon">
+                <img src="images/time.webp" alt="clock icon" />
+              </div>
+              <p class="counter-num" data-target="13">0</p>
+              <p>Trainers</p>
+            </div>
+            <div class="counter">
+              <div class="counter-icon">
+                <img src="images/trophy.webp" alt="trophy icon" />
+              </div>
+              <p class="counter-num" data-target="45">0</p>
+              <p>Award Won</p>
+            </div>
+          </div>
         </div>
-        <!--  -->
-      </div>
-    </section>
+        <div class="team-info">
+          <h1 class="title">Our Team</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+            nonumy eirmod tempor invidunt ut labore.
+          </p>
+          <div class="coaches-list">
+            <div class="coach-info">
+              <div class="coach-img">
+                <img
+                  data-src="images/james-watson.webp"
+                  src="images/james-watson_11zon.jpg"
+                  alt="James Watson"
+                />
+                <div class="social-icons">
+                  <span>
+                    <i class="fab fa-facebook-f"></i>
+                  </span>
+                  <span>
+                    <i class="fab fa-instagram"></i>
+                  </span>
+                  <span>
+                    <i class="fab fa-twitter"></i>
+                  </span>
+                  <span>
+                    <i class="fab fa-linkedin-in"></i>
+                  </span>
+                </div>
+              </div>
+              <h3>James Watson</h3>
+              <p>Tactical Coach</p>
+            </div>
 
-    <!-- -------------about section -->
-    <section id="about" class="about-page">
-      <div class="experience">
-        <h1 class="experience-title">30 Years Of Experience</h1>
-        <div class="experience-image gray-effect">
-          <img src="images/experience.jpg" alt="soccer picture" \ />
+            <div class="coach-info">
+              <div class="coach-img">
+                <img
+                  data-src="images/jessica-davis.webp"
+                  src="images/jessica-davis_11zon.jpg"
+                  alt="Jessica Davis"
+                />
+                <div class="social-icons">
+                  <span>
+                    <i class="fab fa-facebook-f"></i>
+                  </span>
+                  <span>
+                    <i class="fab fa-instagram"></i>
+                  </span>
+                  <span>
+                    <i class="fab fa-twitter"></i>
+                  </span>
+                  <span>
+                    <i class="fab fa-linkedin-in"></i>
+                  </span>
+                </div>
+              </div>
+              <h3>Jessica Davis</h3>
+              <p>Attacking Coach</p>
+            </div>
+            <div class="coach-info">
+              <div class="coach-img">
+                <img
+                  data-src="images/david-hill.webp"
+                  src="images/david-hill_11zon.jpg"
+                  alt="David Hill"
+                />
+                <div class="social-icons">
+                  <span>
+                    <i class="fab fa-facebook-f"></i>
+                  </span>
+                  <span>
+                    <i class="fab fa-instagram"></i>
+                  </span>
+                  <span>
+                    <i class="fab fa-twitter"></i>
+                  </span>
+                  <span>
+                    <i class="fab fa-linkedin-in"></i>
+                  </span>
+                </div>
+              </div>
+              <h3>David Hill</h3>
+              <p>Defensive Coach</p>
+            </div>
+            <div class="coach-info">
+              <div class="coach-img">
+                <img
+                  data-src="images/steffie-w.webp"
+                  src="images/steffie-w_11zon.webp"
+                  alt="Steffie W"
+                />
+                <div class="social-icons">
+                  <span>
+                    <i class="fab fa-facebook-f"></i>
+                  </span>
+                  <span>
+                    <i class="fab fa-instagram"></i>
+                  </span>
+                  <span>
+                    <i class="fab fa-twitter"></i>
+                  </span>
+                  <span>
+                    <i class="fab fa-linkedin-in"></i>
+                  </span>
+                </div>
+              </div>
+              <h3>Steffie W.</h3>
+              <p>Fitness Coach</p>
+            </div>
+          </div>
         </div>
-        <div class="experience-text">
-          <h2 class="sub-heading">Learn More About Us</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe modi
-            explicabo iure fugit facere quos minima reiciendis atque similique
-            quam incidunt voluptatibus repellat quaerat beatae libero dolore
-            voluptate, commodi nihil. Lorem ipsum dolor, sit amet consectetur
-            adipisicing elit. Ullam eos consequatur laborum ducimus accusamus
-            eveniet obcaecati, nam dignissimos quaerat ut ipsum. Cum soluta
-            tempore earum alias iure ad esse velit!
-          </p>
-          <button class="btn-red">Read More</button>
+      </section>
+
+      <!-- -------------schedules section -->
+      <section id="schedules" class="schedules-page">
+        <h1 class="title">Class Schedules</h1>
+        <div class="bg-image">
+          <img
+            data-src="/images/schedules-page-bg.webp"
+            src="/images/schedules-page-bg_11zon.jpg"
+            alt="schedules"
+          />
         </div>
-      </div>
-      <div class="stats">
-        <div class="counter-container">
-          <div class="counter">
-            <div class="counter-icon">
-              <img src="images/people.webp" alt="people icon" />
-            </div>
-            <p class="counter-num" data-target="5321">0</p>
-            <p>Satisfied Trainee</p>
-          </div>
-          <div class="counter">
-            <div class="counter-icon">
-              <img src="images/communication.webp" alt="thumps icon" />
-            </div>
-            <p class="counter-num" data-target="345">0</p>
-            <p>Completed courses</p>
-          </div>
-          <div class="counter">
-            <div class="counter-icon">
-              <img src="images/time.webp" alt="clock icon" />
-            </div>
-            <p class="counter-num" data-target="13">0</p>
-            <p>Trainers</p>
-          </div>
-          <div class="counter">
-            <div class="counter-icon">
-              <img src="images/trophy.webp" alt="trophy icon" />
-            </div>
-            <p class="counter-num" data-target="45">0</p>
-            <p>Award Won</p>
-          </div>
-        </div>
-      </div>
-      <div class="team-info">
-        <h1 class="title">Our Team</h1>
         <p>
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
           nonumy eirmod tempor invidunt ut labore.
         </p>
-        <div class="coaches-list">
-          <div class="coach-info">
-            <div class="coach-img">
-              <img src="images/james-watson.jpg" alt="James Watson" />
-              <div class="social-icons">
-                <span>
-                  <i class="fab fa-facebook-f"></i>
-                </span>
-                <span>
-                  <i class="fab fa-instagram"></i>
-                </span>
-                <span>
-                  <i class="fab fa-twitter"></i>
-                </span>
-                <span>
-                  <i class="fab fa-linkedin-in"></i>
-                </span>
-              </div>
-            </div>
-            <h3>James Watson</h3>
-            <p>Tactical Coach</p>
+        <div class="schedules-container">
+          <div class="schedule">
+            <h3>01.</h3>
+            <p>Mon, 3.00 PM</p>
+            <h2>Fitness Training</h2>
+            <p>Steffie W.</p>
           </div>
+          <div class="schedule">
+            <h3>02.</h3>
+            <p>Tue, 3.00 PM</p>
+            <h2>Tactics Training</h2>
+            <p>James Watson</p>
+          </div>
+          <div class="schedule">
+            <h3>03.</h3>
+            <p>Wed, 3.00 PM</p>
+            <h2>Defensive Training</h2>
+            <p>David Hill</p>
+          </div>
+          <div class="schedule">
+            <h3>04.</h3>
+            <p>Thu, 3.00 AM</p>
+            <h2>Attacking Training</h2>
+            <p>Jessica Davis</p>
+          </div>
+          <div class="schedule">
+            <h3>05.</h3>
+            <p>Fri, 3.00 PM</p>
+            <h2>Fitness Training</h2>
+            <p>Steffie W</p>
+          </div>
+          <div class="schedule">
+            <h3>06.</h3>
+            <p>Sat, 10.00 AM</p>
+            <h2>Tactical Training</h2>
+            <p>James Watson</p>
+          </div>
+          <div class="schedule">
+            <h3>07.</h3>
+            <p>Sat, 3.00 PM</p>
+            <h2>Defensive Training</h2>
+            <p>David Hill</p>
+          </div>
+          <div class="schedule">
+            <h3>08.</h3>
+            <p>Sun, 10.00 AM</p>
+            <h2>Attacking Training</h2>
+            <p>Jessica Davis</p>
+          </div>
+        </div>
+      </section>
 
-          <div class="coach-info">
-            <div class="coach-img">
-              <img src="images/jessica-davis.jpg" alt="Jessica Davis" />
-              <div class="social-icons">
-                <span>
-                  <i class="fab fa-facebook-f"></i>
-                </span>
-                <span>
-                  <i class="fab fa-instagram"></i>
-                </span>
-                <span>
-                  <i class="fab fa-twitter"></i>
-                </span>
-                <span>
-                  <i class="fab fa-linkedin-in"></i>
-                </span>
-              </div>
-            </div>
-            <h3>Jessica Davis</h3>
-            <p>Attacking Coach</p>
-          </div>
-          <div class="coach-info">
-            <div class="coach-img">
-              <img src="images/david-hill.jpg" alt="David Hill" />
-              <div class="social-icons">
-                <span>
-                  <i class="fab fa-facebook-f"></i>
-                </span>
-                <span>
-                  <i class="fab fa-instagram"></i>
-                </span>
-                <span>
-                  <i class="fab fa-twitter"></i>
-                </span>
-                <span>
-                  <i class="fab fa-linkedin-in"></i>
-                </span>
-              </div>
-            </div>
-            <h3>David Hill</h3>
-            <p>Defensive Coach</p>
-          </div>
-          <div class="coach-info">
-            <div class="coach-img">
-              <img src="images/steffie-w.jpg" alt="Steffie W" />
-              <div class="social-icons">
-                <span>
-                  <i class="fab fa-facebook-f"></i>
-                </span>
-                <span>
-                  <i class="fab fa-instagram"></i>
-                </span>
-                <span>
-                  <i class="fab fa-twitter"></i>
-                </span>
-                <span>
-                  <i class="fab fa-linkedin-in"></i>
-                </span>
-              </div>
-            </div>
-            <h3>Steffie W.</h3>
-            <p>Fitness Coach</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- -------------schedules section -->
-    <section id="schedules" class="schedules-page">
-      <h1 class="title">Class Schedules</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-        eirmod tempor invidunt ut labore.
-      </p>
-      <div class="schedules-container">
-        <div class="schedule">
-          <h3>01.</h3>
-          <p>Mon, 3.00 PM</p>
-          <h2>Fitness Training</h2>
-          <p>Steffie W.</p>
-        </div>
-        <div class="schedule">
-          <h3>02.</h3>
-          <p>Tue, 3.00 PM</p>
-          <h2>Tactics Training</h2>
-          <p>James Watson</p>
-        </div>
-        <div class="schedule">
-          <h3>03.</h3>
-          <p>Wed, 3.00 PM</p>
-          <h2>Defensive Training</h2>
-          <p>David Hill</p>
-        </div>
-        <div class="schedule">
-          <h3>04.</h3>
-          <p>Thu, 3.00 AM</p>
-          <h2>Attacking Training</h2>
-          <p>Jessica Davis</p>
-        </div>
-        <div class="schedule">
-          <h3>05.</h3>
-          <p>Fri, 3.00 PM</p>
-          <h2>Fitness Training</h2>
-          <p>Steffie W</p>
-        </div>
-        <div class="schedule">
-          <h3>06.</h3>
-          <p>Sat, 10.00 AM</p>
-          <h2>Tactical Training</h2>
-          <p>James Watson</p>
-        </div>
-        <div class="schedule">
-          <h3>07.</h3>
-          <p>Sat, 3.00 PM</p>
-          <h2>Defensive Training</h2>
-          <p>David Hill</p>
-        </div>
-        <div class="schedule">
-          <h3>08.</h3>
-          <p>Sun, 10.00 AM</p>
-          <h2>Attacking Training</h2>
-          <p>Jessica Davis</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- -------------Pricing section -->
-    <section id="pricing" class="pricing-page">
-      <h1 class="title">Pricing Plans</h1>
-      <p class="description">
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-        eirmod tempor invidunt ut labore.
-      </p>
-      <div class="pricing-plans">
-        <div class="pricing-plan">
-          <h3>Basic</h3>
-          <h2>$29 <span> /Monthly</span></h2>
-          <hr />
-          <p>3 Days a Week</p>
-          <p>Dedicated Trainer Allocated</p>
-          <p>Meals Included</p>
-          <p>Morning and Evening Batches</p>
-          <div class="pricing-btn">
-            <a class="gray-btn">Purchase Now</a>
-          </div>
-        </div>
-        <div class="pricing-plan">
-          <h3>Standard</h3>
-          <h2>$49 <span> /Monthly</span></h2>
-          <hr />
-          <p>3 Days a Week</p>
-          <p>Dedicated Trainer Allocated</p>
-          <p>Meals Included</p>
-          <p>Morning and Evening Batches</p>
-          <div class="pricing-btn">
-            <a>Purchase Now</a>
-          </div>
-        </div>
-        <div class="pricing-plan">
-          <h3>Premium</h3>
-          <h2>$99 <span> /Monthly</span></h2>
-          <hr />
-          <p>3 Days a Week</p>
-          <p>Dedicated Trainer Allocated</p>
-          <p>Meals Included</p>
-          <p>Morning and Evening Batches</p>
-          <div class="pricing-btn">
-            <a class="gray-btn">Purchase Now</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- -------------Reviews container -->
-    <section class="reviews">
-      <!-- SwiperJS -->
-      <div class="swiper">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide">
-            <div class="review-list">
-              <div class="image-div">
-                <img src="./images/reviewer-1.webp" alt="Adam" />
-              </div>
-              <h3>Adam John</h3>
-              <span>Senior Player</span>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Reiciendis ipsa totam tempora consequuntur maxime deleniti
-                possimus architecto molestias consectetur, eum rerum
-                exercitationem iure quisquam fugiat temporibus, maiores nobis.
-                Maxime, delectus.
-              </p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="review-list">
-              <div class="image-div">
-                <img src="./images/reviewer-2.webp" alt="Clara" />
-              </div>
-              <h3>Clara</h3>
-              <span>Pro-Footballer</span>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Reiciendis ipsa totam tempora consequuntur maxime deleniti
-                possimus architecto molestias consectetur, eum rerum
-                exercitationem iure quisquam fugiat temporibus, maiores nobis.
-                Maxime, delectus.
-              </p>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="review-list">
-              <div class="image-div">
-                <img src="./images/reviewer-3.webp" alt="Adam" />
-              </div>
-              <h3>Luke</h3>
-              <span>Academy Player</span>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Reiciendis ipsa totam tempora consequuntur maxime deleniti
-                possimus architecto molestias consectetur, eum rerum
-                exercitationem iure quisquam fugiat temporibus, maiores nobis.
-                Maxime, delectus.
-              </p>
-            </div>
-          </div>
-        </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
-      </div>
-    </section>
-
-    <!-- ----------------Contact section -->
-    <section id="contact" class="contact-page">
-      <div class="form-container">
-        <form class="contact-form" id="contact-form">
-          <h1 class="sub-heading">Get in Touch</h1>
-          <input required name="name" type="text" placeholder="Name" />
-          <input required name="email" type="email" placeholder="Email" />
-          <input required name="subject" type="text" placeholder="Subject" />
-          <textarea
-            required
-            name="message"
-            class="message-field"
-            placeholder="Message"
-          ></textarea>
-          <button class="btn-red" type="submit">Submit</button>
-        </form>
-      </div>
-      <div class="map-container">
-        <div id="map"></div>
-      </div>
-    </section>
-
-    <!-- ------------------Footer section -->
-    <footer>
-      <div class="overview">
-        <div class="overview-item">
-          <h3>Contact</h3>
-          <p>Phone:(123) 456-7890</p>
-          <p>Email:soccer@gmil.com</p>
-          <p>
-            Location:123 Main Street,
-            <br />
-            Springfield, IL 62701, USA
-          </p>
-        </div>
-        <div class="overview-item">
-          <h3>Course</h3>
-          <p>Striker</p>
-          <p>Defender</p>
-          <p>Goalkeeper</p>
-          <p>Registration</p>
-        </div>
-        <div class="overview-item">
-          <h3>Quick Link</h3>
-          <p>
-            <a href="#home" class="hover-red-text">Home</a>
-          </p>
-          <p>
-            <a href="#course" class="hover-red-text">Courses</a>
-          </p>
-          <p>
-            <a href="#about" class="hover-red-text">About</a>
-          </p>
-          <p>
-            <a href="#schedules" class="hover-red-text">Schedules</a>
-          </p>
-          <p>
-            <a href="#pricing" class="hover-red-text">Pricing</a>
-          </p>
-          <p>
-            <a href="#contact" class="hover-red-text">Contact</a>
-          </p>
-        </div>
-        <div class="overview-item">
-          <h3>Follow Us On</h3>
-          <div class="social-media">
-            <span class="hover-red-bg">
-              <i class="fab fa-facebook-f"></i>
-            </span>
-            <span class="hover-red-bg">
-              <i class="fab fa-instagram"></i>
-            </span>
-            <span class="hover-red-bg">
-              <i class="fab fa-twitter"></i>
-            </span>
-            <span class="hover-red-bg">
-              <i class="fab fa-linkedin-in"></i>
-            </span>
-          </div>
-        </div>
-      </div>
-      <div class="copyright">
-        <p>
-          Copyright © 2025.
-          <a
-            href="https://ibnumuhthar.netlify.app/"
-            target="_blank"
-            class="hover-red-text"
-            >Ibnu Muhthar</a
-          >
+      <!-- -------------Pricing section -->
+      <section id="pricing" class="pricing-page">
+        <h1 class="title">Pricing Plans</h1>
+        <p class="description">
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+          nonumy eirmod tempor invidunt ut labore.
         </p>
-      </div>
-    </footer>
+        <div class="pricing-plans">
+          <div class="pricing-plan">
+            <h3>Basic</h3>
+            <h2>$29 <span> /Monthly</span></h2>
+            <hr />
+            <p>3 Days a Week</p>
+            <p>Dedicated Trainer Allocated</p>
+            <p>Meals Included</p>
+            <p>Morning and Evening Batches</p>
+            <div class="pricing-btn">
+              <a href="#" class="gray-btn">Purchase Now</a>
+            </div>
+          </div>
+          <div class="pricing-plan">
+            <h3>Standard</h3>
+            <h2>$49 <span> /Monthly</span></h2>
+            <hr />
+            <p>3 Days a Week</p>
+            <p>Dedicated Trainer Allocated</p>
+            <p>Meals Included</p>
+            <p>Morning and Evening Batches</p>
+            <div class="pricing-btn">
+              <a href="#">Purchase Now</a>
+            </div>
+          </div>
+          <div class="pricing-plan">
+            <h3>Premium</h3>
+            <h2>$99 <span> /Monthly</span></h2>
+            <hr />
+            <p>3 Days a Week</p>
+            <p>Dedicated Trainer Allocated</p>
+            <p>Meals Included</p>
+            <p>Morning and Evening Batches</p>
+            <div class="pricing-btn">
+              <a href="#" class="gray-btn">Purchase Now</a>
+            </div>
+          </div>
+        </div>
+        <!-- -------------Reviews container -->
+        <section class="reviews">
+          <div class="bg-image">
+            <img
+              data-src="./images/slider-bg.webp"
+              src="./images/slider-bg_11zon.jpg"
+              alt="reviews"
+            />
+          </div>
+          <!-- SwiperJS -->
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="review-list">
+                  <div class="image-div">
+                    <img
+                      src="./images/reviewer-1_11zon.webp"
+                      data-src="./images/reviewer-1.webp"
+                      alt="Adam"
+                    />
+                  </div>
+                  <h3>Adam John</h3>
+                  <span>Senior Player</span>
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Reiciendis ipsa totam tempora consequuntur maxime deleniti
+                    possimus architecto molestias consectetur, eum rerum
+                    exercitationem iure quisquam fugiat temporibus, maiores
+                    nobis. Maxime, delectus.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="review-list">
+                  <div class="image-div">
+                    <img
+                      src="./images/reviewer-2_11zon.webp"
+                      data-src="./images/reviewer-2.webp"
+                      alt="Clara"
+                    />
+                  </div>
+                  <h3>Clara</h3>
+                  <span>Pro-Footballer</span>
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Reiciendis ipsa totam tempora consequuntur maxime deleniti
+                    possimus architecto molestias consectetur, eum rerum
+                    exercitationem iure quisquam fugiat temporibus, maiores
+                    nobis. Maxime, delectus.
+                  </p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="review-list">
+                  <div class="image-div">
+                    <img
+                      data-src="./images/reviewer-3.webp"
+                      src="./images/reviewer-3_11zon.webp"
+                      alt="Adam"
+                    />
+                  </div>
+                  <h3>Luke</h3>
+                  <span>Academy Player</span>
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Reiciendis ipsa totam tempora consequuntur maxime deleniti
+                    possimus architecto molestias consectetur, eum rerum
+                    exercitationem iure quisquam fugiat temporibus, maiores
+                    nobis. Maxime, delectus.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </section>
+      </section>
 
-    <!-- -----------------SCRIPTS -->
-    <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@16/dist/smooth-scroll.polyfills.min.js"></script>
-    <script
-      type="module"
-      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
-    ></script>
+      <!-- ----------------Contact section -->
+      <section id="contact" class="contact-page">
+        <div class="form-container">
+          <form class="contact-form" id="contact-form">
+            <h1 class="sub-heading">Get in Touch</h1>
+            <input required name="name" type="text" placeholder="Name" />
+            <input required name="email" type="email" placeholder="Email" />
+            <input required name="subject" type="text" placeholder="Subject" />
+            <textarea
+              required
+              name="message"
+              class="message-field"
+              placeholder="Message"
+            ></textarea>
+            <button class="btn-red" type="submit">Submit</button>
+          </form>
+        </div>
+        <div class="map-container">
+          <div id="map"></div>
+        </div>
+      </section>
+
+      <!-- ------------------Footer section -->
+      <footer>
+        <div class="overview">
+          <div class="overview-item">
+            <h3>Contact</h3>
+            <p>Phone:(123) 456-7890</p>
+            <p>Email:soccer@gmil.com</p>
+            <p>
+              Location:123 Main Street,
+              <br />
+              Springfield, IL 62701, USA
+            </p>
+          </div>
+          <div class="overview-item">
+            <h3>Course</h3>
+            <p>Striker</p>
+            <p>Defender</p>
+            <p>Goalkeeper</p>
+            <p>Registration</p>
+          </div>
+          <div class="overview-item">
+            <h3>Quick Link</h3>
+            <p>
+              <a href="#home" class="hover-red-text">Home</a>
+            </p>
+            <p>
+              <a href="#course" class="hover-red-text">Courses</a>
+            </p>
+            <p>
+              <a href="#about" class="hover-red-text">About</a>
+            </p>
+            <p>
+              <a href="#schedules" class="hover-red-text">Schedules</a>
+            </p>
+            <p>
+              <a href="#pricing" class="hover-red-text">Pricing</a>
+            </p>
+            <p>
+              <a href="#contact" class="hover-red-text">Contact</a>
+            </p>
+          </div>
+          <div class="overview-item">
+            <h3>Follow Us On</h3>
+            <div class="social-media">
+              <span class="hover-red-bg">
+                <i class="fab fa-facebook-f"></i>
+              </span>
+              <span class="hover-red-bg">
+                <i class="fab fa-instagram"></i>
+              </span>
+              <span class="hover-red-bg">
+                <i class="fab fa-twitter"></i>
+              </span>
+              <span class="hover-red-bg">
+                <i class="fab fa-linkedin-in"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>
+            Copyright © 2025.
+            <a
+              href="https://ibnumuhthar.netlify.app/"
+              target="_blank"
+              class="hover-red-text"
+              >Ibnu Muhthar</a
+            >
+          </p>
+        </div>
+      </footer>
+    </div>
+    <!-- SCRIPT -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script type="module" src="index.js"></script>
   </body>

@@ -1,113 +1,133 @@
-import Swiper from 'swiper';
-import 'swiper/swiper-bundle.css';
-
 const menu = document.querySelector(".menu");
 const menuContent = document.querySelector(".menu-content");
 const contactConfirmModal = document.querySelector(".modal-contact-confirm");
 const contactModalCloseBtn = document.querySelector("#contact-modal-close-btn");
+const page = document.querySelector(".page");
+const pageLoader = document.querySelector(".loader-div");
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-link");
+const counters = document.querySelectorAll(".counter-num");
+const imgTargets = document.querySelectorAll("img[data-src]");
 
-document.addEventListener('DOMContentLoaded', function () {
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.nav-link');
-    const counters = document.querySelectorAll('.counter-num');
+const swiper = new Swiper(".swiper", {
+    init: false,
+    loop: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+});
 
-    const scroll = new SmoothScroll('.nav-link', {
-        speed: 800,
-        offset: 0,
-        updateURL: false,
-    });
+swiper.init();
 
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const id = entry.target.getAttribute('id');
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (menu.classList.contains("active")) {
-                        menuContent.classList.remove("active");
-                        menu.classList.remove("active");
-                    }
-                    if (link.getAttribute('href').substring(1) === id) {
-                        link.classList.add('active');
-                    }
-                });
+document.addEventListener("DOMContentLoaded", () => {
+    initializePageLoader();
+    initializeIntersectionObserver();
+    initializeMenuToggle();
+    initializeContactForm();
+    initializeMap();
+    initializeLazyLoading();
+});
 
-                if (entry.target.classList.contains('counter-num')) {
-                    updateCounter(entry.target);
-                    observer.unobserve(entry.target);
-                }
-            }
+function initializePageLoader() {
+    page.style.display = "block";
+    pageLoader.style.display = "none";
+}
+
+function initializeIntersectionObserver() {
+    const observer = new IntersectionObserver(handleIntersection, { threshold: 0.1 });
+    sections.forEach(section => observer.observe(section));
+    counters.forEach(counter => observer.observe(counter));
+}
+
+function handleIntersection(entries, observer) {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+
+        const id = entry.target.getAttribute("id");
+        navLinks.forEach(link => {
+            link.classList.toggle("active", link.getAttribute("href").substring(1) === id);
         });
-    }, {
-        threshold: 0.1
+
+        if (entry.target.classList.contains("counter-num")) {
+            updateCounter(entry.target);
+            observer.unobserve(entry.target);
+        }
     });
+}
 
-    sections.forEach(section => {
-        observer.observe(section);
-    });
-    counters.forEach(counter => {
-        observer.observe(counter);
-    });
+function updateCounter(counter) {
+    const target = Number(counter.getAttribute("data-target"));
+    let count = 0;
+    const increment = target / 200;
 
-    function updateCounter(counter) {
-        const target = +counter.getAttribute('data-target');
-        const duration = 2000;
-        const increment = target / (duration / 10);
-        let count = 0;
-
-        const update = () => {
-            if (count < target) {
-                counter.innerText = Math.ceil(count);
-                count += increment;
-                setTimeout(update, 10);
-            } else {
-                counter.innerText = target;
-            }
-        };
-
-        update();
+    function update() {
+        count = Math.min(count + increment, target);
+        counter.innerText = Math.ceil(count);
+        if (count < target) setTimeout(update, 10);
     }
+    update();
+}
 
-    menu.addEventListener('click', () => {
+function initializeMenuToggle() {
+    menu.addEventListener("click", () => {
         menu.classList.toggle("active");
         menuContent.classList.toggle("active");
     });
+    navLinks.forEach(nav =>
+        nav.addEventListener("click", () => {
+            if (menu.classList.contains("active") &&
+                menuContent.classList.contains("active")) {
+                menu.classList.remove("active");
+                menuContent.classList.remove("active");
+            }
+        })
+    )
 
-    contactModalCloseBtn.addEventListener("click", () => {
-        contactConfirmModal.classList.remove("active");
+}
+
+function initializeContactForm() {
+    const form = document.getElementById("contact-form");
+    const modal = document.querySelector(".modal-contact-confirm");
+    const closeBtn = document.querySelector(".btn-close");
+
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        modal.classList.add("active");
+        form.reset();
     });
 
-    const swiper = new Swiper('.swiper', {
-        loop: true,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-    });
+    closeBtn.addEventListener("click", () => modal.classList.remove("active"));
+}
 
-    swiper.on('slideChange', function () {
-        console.log('Slide index changed to: ', swiper.realIndex);
-    });
 
-    const academyLocation = [22.3445, 114.1831];
-    const map = L.map('map').setView(academyLocation, 15);
+function initializeMap() {
+    const location = [22.3445, 114.1831];
+    const map = L.map("map").setView(location, 15);
 
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution: "&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
     }).addTo(map);
 
-    const marker = L.marker(academyLocation).addTo(map)
-        .bindPopup('Soccer Coaching Academy')
+    L.marker(location).addTo(map)
+        .bindPopup("Soccer Coaching Academy")
         .openPopup();
+}
 
-    function handleSubmitContact(e) {
-        e.preventDefault();
+function initializeLazyLoading() {
+    const imgObserver = new IntersectionObserver(loadImg, {
+        root: null,
+        threshold: 0,
+        rootMargin: "400px"
+    });
+    imgTargets.forEach(img => imgObserver.observe(img));
+}
 
-        const form = e.target;
-        contactConfirmModal.classList.add("active");
-        form.reset();
-    }
-
-    const form = document.getElementById('contact-form');
-    form.addEventListener('submit', handleSubmitContact);
-});
+function loadImg(entries, observer) {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        entry.target.src = entry.target.dataset.src;
+        entry.target.removeAttribute("data-src");
+        observer.unobserve(entry.target);
+    });
+}
